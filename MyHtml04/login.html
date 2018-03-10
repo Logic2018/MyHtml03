@@ -4,6 +4,7 @@
 		<meta charset="UTF-8">
 		<title>Login</title>
 		<script type="text/javascript" src="js/jquery-3.3.1.min.js" ></script>
+		<script type="text/javascript" src="js/vue.js" ></script>
 		<link rel="stylesheet" type="text/css" href="css/login.css" />
 
 	</head>
@@ -29,13 +30,15 @@
 						<h2 style="text-align: center;">Login</h3>
 						<!--<div class="input-img"></div>-->
 						
-						<div class="input-text" >
-							<input type="text" name="name" placeholder="Name"/>
-							<!--<p v-model="message"/></p>-->
+						<div class="input-text" id="app1">
+							<input type="text" name="name" placeholder="Name" v-on:blur="fun1" v-model="username"/>
+							<span  type="text" >{{message}}</span>
+							
 						</div>
 						
-						<div class="input-text">
-							<input type="password" name="name" placeholder="Password"/>
+						<div class="input-text" id="app2">
+							<input type="password" name="name" placeholder="Password" v-on:blur="fun2" v-model="password"/>
+							<span  type="text" >{{message}}</span>
 						</div>
 						
 						<br />
@@ -54,14 +57,14 @@
 			</div>
 			
 			
-			<div id="app">
+			<!--<div id="app">
 				<input type="text" name="input" v-on:blur="fun1" v-model="username"/>
 				<input type="text" v-model="message" />
 			
 			<p><button type="button"  >key</button></p>
 			
 			
-			</div>
+			</div>-->
 						
 			<div id="dfoot">
 				<address>Power by Logic</address>
@@ -71,7 +74,14 @@
 			
 			
 			
+		<!--<div id="app">
+			<input type="text" name="input" v-on:blur="fun1" v-model="username" />
+			<p type="text" >{{message}}</p>
 			
+			<p><button type="button" v-on:click="fun1" >key</button></p>
+			
+			
+		</div>-->
 			
 			
 			
@@ -82,5 +92,5 @@
 		</div>
 		
 	</body>
-			<script type="text/javascript" src="../js/myvue.js" ></script>
+			<script type="text/javascript" src="js/login.js" ></script>
 </html>
