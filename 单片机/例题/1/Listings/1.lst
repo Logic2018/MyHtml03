@@ -1,0 +1,55 @@
+C51 COMPILER V9.54   1                                                                     02/10/2018 18:22:56 PAGE 1   
+
+
+C51 COMPILER V9.54, COMPILATION OF MODULE 1
+OBJECT MODULE PLACED IN .\Objects\1.obj
+COMPILER INVOKED BY: d:\Keil_v5\C51\BIN\C51.EXE 1.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\1.lst) 
+                    -TABS(2) OBJECT(.\Objects\1.obj)
+
+line level    source
+
+   1          /*#include<reg51.h>
+   2          sbit P1_0=P1^0;
+   3          void main(){
+   4            TMOD=0x01;      //设置工作方式
+   5            TR0=1;          //启动定时器T0
+   6            while(1){
+   7              TH0=0xfe;     //载入初值
+   8              TL0=0x0c;
+   9              while(!TF0);  //查询TF0置位
+  10              P1_0=!P1_0;   //计时满溢取反
+  11              TF0=0;        //软件TF0清0  
+  12            }
+  13          }*/
+  14          //*
+  15          #include<reg51.h>
+  16          sbit P1_0=P1^0;
+  17          turn()interrupt 1 //1号中断控制T0
+  18          {
+  19   1          P1_0=!P1_0;   //计时满溢取反  
+  20   1          TH0=0xfe;     //载入初值
+  21   1          TL0=0x0c; 
+  22   1      }
+  23          void main(){
+  24   1          TMOD=0x01;    //设置工作方式
+  25   1          EA=1;         //打开总中断
+  26   1          ET0=1;        //打开T0中断    
+  27   1          TH0=0xfe;     //载入初值
+  28   1          TL0=0x0c;
+  29   1          TR0=1;        //打开定时器T0
+  30   1      while(1); 
+  31   1      }//*/
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     26    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

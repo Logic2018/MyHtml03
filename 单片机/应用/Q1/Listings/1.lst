@@ -1,0 +1,75 @@
+C51 COMPILER V9.54   1                                                                     02/05/2018 19:51:28 PAGE 1   
+
+
+C51 COMPILER V9.54, COMPILATION OF MODULE 1
+OBJECT MODULE PLACED IN .\Objects\1.obj
+COMPILER INVOKED BY: d:\Keil_v5\C51\BIN\C51.EXE 1.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\1.lst) 
+                    -TABS(2) OBJECT(.\Objects\1.obj)
+
+line level    source
+
+   1          #include<reg51.h>
+   2          char led[]={0xfe,0xfd,0xfb,0xf7,0xef,0xdf};
+   3          bit dir=0,run=0;
+   4          unsigned int i=0;
+   5          unsigned int t=1000;          //默认1ms*1000
+   6          void delay(unsigned int t){   //延时1ms*t
+   7   1        TMOD=0x01;        //T0的方式1
+   8   1        while(1){
+   9   2          TH0=0xfc;       //定时1ms
+  10   2          TL0=0x18;
+  11   2          TR0=1;          //打开定时器
+  12   2          while(!TF0);    //查询是否计时结束
+  13   2          if(++i%t==0)    //  #1  
+  14   2            break;
+  15   2          TF0=0;
+  16   2        }
+  17   1      }
+  18          key()interrupt 0{
+  19   1        switch(P0&0x0f){      //开关控制
+  20   2          case 0x0e:run=1;dir=0;break;//从下到上
+  21   2          case 0x0d:run=1;dir=1;break;//从上到下
+  22   2          case 0x0b:t=t/2;break;
+  23   2          case 0x07:dir=0;run=0;break;
+  24   2        }
+  25   1      }
+  26          void main(){
+  27   1        char i;
+  28   1        EA=1;            //打开总中断
+  29   1        EX0=1;           //打开INT0中断
+  30   1        IT0=1;           //INT0采用边沿触发方式
+  31   1        
+  32   1              
+  33   1        while(1){
+  34   2          P2=0x2a;        //彩灯实现交替闪烁
+  35   2          if(run){        //流水灯  
+  36   3            if(dir) 
+  37   3              for( i=0;i<=5;i++){ //从下到上
+  38   4                P2=led[i];
+  39   4                delay(t);
+  40   4              }
+  41   3            else    
+  42   3              for(i=5;i>=0;i--){  //从上到下
+  43   4                P2=led[i];
+  44   4                delay(t);
+  45   4            }
+  46   3          }   
+  47   2          P2=0x15;        //彩灯实现交替闪烁
+  48   2        }
+  49   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    158    ----
+   CONSTANT SIZE    =   ----    ----
+C51 COMPILER V9.54   1                                                                     02/05/2018 19:51:28 PAGE 2   
+
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =     10    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =      2    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
