@@ -1,0 +1,74 @@
+	*{
+		font-family: "微软雅黑";
+		margin: 0;
+		padding: 0;
+	}
+	#div010{
+		background-color: #FFFCD8;
+		width: 100%;
+		height: 30px;
+	}
+	#div020{
+		background-image: url(../img/b01.jpg);
+		min-height: 500px;
+		width: 100%;
+	}
+	#div001{
+		background-color: white;
+		width: 350px;
+		height: 450px;
+		position: absolute;
+		right: 200px;
+		top: 100px;
+		border-radius: 3px;
+		box-shadow: 0 0 1px black;
+	}
+	#ip0{
+		
+		
+	}
+	#div001 p{
+		font-size: 18px;
+		padding: 10px;
+		margin-bottom: 10px;
+	}
+	#div001 h3 {
+		position: absolute;
+		left: 50px;
+		top: 0;
+	}
+	#div001 input{
+		border: none;
+		height: 40px;
+		width: 100%;
+		font-size: 18px;
+		text-align: left;
+
+		
+	}
+	.div0{
+		border: 1px solid gainsboro;
+		width: 320px;
+		height: 40px;
+		margin: 0 auto;
+	}
+	#div1 input{
+		size: 5px;
+	}
+	#logbutton{
+		border: none ;
+		width: 320px;
+		height: 40px;
+		margin: 0 auto;
+		
+	}
+	#logbutton input{
+		background: #FF9A14;
+		text-align: center;
+		color: white;
+		border-radius: 3px;
+	}
+	#logbutton input:hover{
+		background: #D99A14;
+		
+	}
