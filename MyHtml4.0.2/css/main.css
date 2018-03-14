@@ -1,0 +1,217 @@
+
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	#dhead a{
+		text-decoration: none;
+		width: 30px;	
+		color: white;
+	}
+	#dhead a:hover{
+		color: black;
+	}
+	#dhead{
+		width: 100%;
+		height: 200px;
+		background-color: #E31D1A;
+		/*border: 1px solid black;*/
+	}
+	#dhead img{
+		position: absolute;
+		left: 50px;
+	}
+	#search-i{
+		border: none;
+		/*border: 1px solid;*/
+		width: 380px;
+		height: 40px;
+		position: absolute;
+		top: 80px;
+		right: 40%;
+		font-size: 20px;
+		box-shadow: 0 0 3px white;
+		
+	}
+	#search-k{
+		border: none;
+		/*background:#E31D1A;*/
+		width: 50px;
+		height: 40px;
+		position: absolute;
+		top: 80px;
+		right: 35%;
+	}
+	#search-k:hover{
+		box-shadow: 0 0 7px white;
+	}
+	
+	#dhead  div{
+		width: 100%;
+		height: 30px;
+		background-color: #E31D1A;		
+		text-align: right;
+	
+	}
+	#dhead h1{
+		color: white;
+		position: absolute;
+		top: 50px;
+		left: 20px;
+	}
+
+	#dbody{
+		width: 100%;
+		height: 1500px;
+		background-color:#E8E8E8;
+	}
+	#b-head{
+		width: 100%;
+		height: 320px;
+		/*border: 1px solid black;*/
+	}
+	#ul01 a{
+		text-decoration: none;
+		width: 30px;	
+		color: black;
+		/*border: 1px solid;*/
+		padding: 10px;
+		margin: 10px;
+		background: wheat;
+		border-radius: 5px;
+		box-shadow:  0 0 5px black;
+	}
+	#ul01 a:hover{
+		background-color: white;
+		box-shadow:  0 0 10px white;
+	}
+	#ul01 li{
+		float: left;
+		color: black;
+		list-style: none;
+	}
+
+	#tab td{
+		/*border: 1px solid;*/	
+		text-align: center;
+		font-weight: 600;
+	}
+	#tab a{
+		text-decoration: none;
+		color: black;
+	}
+	#tab a:hover{
+		color: red;
+	}
+	.img-head{
+		margin: 10px;
+		padding: 10px;
+		float: left;				
+	}
+	.img-head:hover{
+		transform: scale(1.1);
+		transition: 0.25s;
+	}
+	#b-body-l{
+		float: left;
+		/*background-color:  #E8E8E8;*/
+		width: 38%;
+		height: 670px;
+		border-radius: 5px;
+		/*box-shadow:  0 0 3px gray;*/
+		position: absolute;
+		left: 7px;
+	}
+		
+	#app{
+		background-color:  #E8E8E8;
+		width: 100%;
+		height: 30%;
+		border-radius: 5px;
+		box-shadow:  0 0 3px gray;
+		margin-bottom: 10px;
+	}	
+	#app0{
+		background-color:  #E8E8E8;
+		width: 100%;
+		height: 68%;
+		border-radius: 5px;
+		box-shadow:  0 0 3px gray;
+		
+	}
+	#app0 h3{
+		margin: 10px;
+		color: red;
+	}
+	#app0 div{
+
+		/*border: 1px solid;*/
+		padding: 10px;
+	}
+	#app0 textarea{
+		width: 98%;
+		height: 70px;
+		border-radius: 12px;
+	}
+	#b-body-l table {
+		padding: 10px;
+		margin: 10px;
+		/*border: 1px solid black;*/
+		width: 80%;
+		height: 100px;
+		
+	}
+	#b-body-l table th{
+		background: gray;
+	}
+	#b-body-l table td{
+		text-align: center;
+		
+	}
+	#b-body-l span{
+		margin-left: 25px;
+
+	}
+	#b-body-l span input[type="text"]{
+		border: 1px solid gray;
+		width: 20%;
+		height: 20px;
+		margin: 10px;
+		border-radius: 5px;	
+	}
+	
+	#b-body-r{
+		float: right;
+		background-color:  #E8E8E8;
+		/*border: 1px solid;*/
+		width: 60%;
+		height: 670px;
+		border-radius: 5px;
+		box-shadow:  0 0 3px gray;
+		position: absolute;
+		right: 7px;
+	}
+	#b-body-r div{
+		/*border: 1px solid;*/
+		margin: 0 auto;
+		padding: 10px;
+	}
+	#b-body-bottom{
+		background-color:  #E8E8E8;
+		/*border: 1px solid;*/
+		width: 99%;
+		height: 490px;
+		border-radius: 5px;
+		box-shadow:  0 0 3px gray;
+		position: absolute;
+		right: 7px;
+		top: 1200px;
+	}
+		
+
+	#dfoot{
+		width: 100%;
+		height: 50px;
+		background-color:black;
+	}
+

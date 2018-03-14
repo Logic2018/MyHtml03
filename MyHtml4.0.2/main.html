@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>MyHtml</title>
+		<script type="text/javascript" src="js/jquery-3.3.1.min.js" ></script>
+		<script type="text/javascript" src="js/vue.js" ></script>
+		<link rel="stylesheet" href="css/main.css" />
+	</head>
+	<body>
+		<div>
+			<div id="dhead">				
+					<div>
+						<a href="login.html">Login>></a>
+						<br />
+						<img src="img/jd.png" />
+							<input id="search-i"  type="text" />
+							<input id="search-k" type="button" value="搜索"/>
+						
+					</div>
+			</div>
+			<div id="dbody">
+				
+				<div id="b-head">
+					
+					<ul id="ul01">
+						<li><a  href="http://baidu.com"target="_blank">我的订单</a></li>
+						<li><a  href="http://baidu.com"target="_blank">我的京东</a></li>
+						<li><a  href="http://baidu.com"target="_blank">京东会员</a></li>
+						<li><a  href="http://baidu.com"target="_blank">客户服务</a></li>			
+					</ul>
+					<div style="clear: both;"></div>
+					<br />
+					<hr style="color:red;"/>
+						<h1 style="color: red; text-align: center;">热销产品</h1>
+						
+						<div id="app1" style="border: 1px solid; height: 100px;">
+							
+							<input type="button" value="key" v-on:click="fun2"/>
+							<ul>
+						
+								<li v-for="good in goods">							
+									<div style="height: 20px; width: 20px;>
+										<img   src="img/01.png" "/>
+										
+									</div>	
+										<h3>
+											{{goods.id}}
+											
+										</h3>
+
+								</li>
+							</ul>
+							<!--<ul v-for="good in goods">
+								<li>
+									<div style="width: 20%; height: 100%; background-color: bisque;"></div>
+									{{good.id}}
+								</li>
+							</ul>-->
+						</div>
+						
+							
+					
+
+					<div style="clear: both;"></div>
+				</div>
+				<div id="b-body-r">
+					
+					<div>
+						<h3>测试视频</h3>
+						<video width="100%" height="400px" controls="controls" autoplay="autoplay">
+						  <source src="video/v01.mp4" />
+						</video>
+					</div>
+					
+					
+	
+	
+	
+				</div>
+					
+				<div id="b-body-l" >
+					<div id="app">
+						<span >
+							<input type="button" value="番剧搜索" v-on:click="fun1" />
+							<input type="text" v-model="id" />
+						</span>
+						<table >
+							<tr>
+								<th>ID</th>
+								<th>Name</th>							
+							</tr>
+							<tr  v-for="list in lists">
+								<td>{{list.id}}</td>
+								<td>{{list.name}}</td>														
+							</tr>
+							
+							
+						</table>
+					</div>
+					
+					<div id="app0">
+						<h3>番剧点评：</h3>
+						<div>
+							<p>&nbsp;&nbsp;&nbsp;&nbsp;纳萨力克其实就是一个“公司”一个小型社会职场，里面的人在尽忠但也在竞争。
+								虽不会上升到王国那样的分派斗争，但也有些让人不寒而栗。飞飞步入的冒险者圈子也让人看出了浓浓的“社会风”。
+								这是在其他动漫魔幻与热血剧里所看不到的。只看动漫的话，只会想着哇这个能力好强，A比B强之类的感慨，
+								但小说中细致的心理描写以及人物决定让人反思如果是自己的话会怎么做呢？这里这么做会比较好之类的想法，
+								如果我是XX我也觉得这么做最好。外安兹测试赛巴斯时，出动了4位守护者，而且仔细想想的话确实是有必要的，
+								称不上“智斗”但处处彰显成熟，一边小心翼翼的试探一边琢磨对方的想法，不论交谈还是战斗，都没有把读者当成傻瓜。
+								小迪和赛巴斯交谈的勾心斗角但又不撕破脸皮的吵架，仿佛看到了两个公司的部长为各自员工争取利益在董事长面前争吵的样子。								
+							</p>
+							<h3>写评论：</h3>
+							<textarea ></textarea>
+						</div>
+						
+					</div>
+					
+				
+						
+				</div>
+				
+				<div id="b-body-bottom">
+						
+				</div>
+		
+		
+		
+		
+				</div>
+				<div></div>
+				<div></div>
+				
+			</div>
+			<div id="dfoot">
+				
+				<address style="color: white;">Power by Logic</address>	
+			</div>
+			
+	
+		</div>
+	</body>
+	<script type="text/javascript" src="js/main.js" ></script>
+	
+</html>
